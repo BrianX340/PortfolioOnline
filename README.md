@@ -2,7 +2,7 @@
 <h1> Bienvenidos a mi Portfolio en Github</h1>
 
 <p align='center'>
-<img src="./profile.jpg" style='border-radius:10px;'>
+<img src="./profile.gif" style='border-radius:10px;'>
 </p>
 
  <h2> ¿Quien soy? </h2>
