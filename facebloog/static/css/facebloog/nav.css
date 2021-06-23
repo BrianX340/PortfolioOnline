@@ -1,0 +1,72 @@
+#header_wrapper {
+    width: 100%;
+    min-width: 980px;
+    background-color: #b52b2be6;
+}
+
+#header {
+    width: 980px;
+    margin: 0px auto;
+    padding: 0px;
+    height: 85px;
+}
+
+#header li {
+    list-style-type: none;
+    float: left;
+    text-align: left;
+    color: white;
+}
+
+#header #sitename {
+    margin-top: 25px;
+    width: 50%;
+}
+
+#header #sitename a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#header form {
+    margin-top: 15px;
+    float: right;
+}
+
+#header form li {
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+#header form li a {
+    color: #A9BCF5;
+    text-decoration: none;
+}
+
+#header form input[type="text"] {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 150px;
+    border: 1px solid #08298A;
+    height: 25px;
+    padding-left: 3px;
+}
+
+#header form input[type="password"] {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 150px;
+    border: 1px solid #08298A;
+    height: 25px;
+    padding-left: 3px;
+}
+
+#header form input[type="submit"] {
+    height: 25px;
+    margin-top: 20px;
+    background-color: #f00;
+    color: white;
+    border: 1px solid #000A;
+}

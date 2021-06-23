@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+body {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#control section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    text-align: initial;
+}
+
+.comment-form button {
+    text-align: right;
+    float: right;
+    margin-top: 3px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgb(196 251 205 / 91%) 0%, rgb(56 163 255 / 92%) 100%);
+    box-shadow: 0 0 20px #fbfbfb;
+}
+
+#header_wrapper #header {
+    display: flex;
+}
+
+#header .post-header {
+    width: 50%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+#header .post-header li {
+    margin: auto;
+}
+
+#header .post-header a:-webkit-any-link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.login-form {
+    display: table-caption;
+}
+
+.login-form input {
+    min-height: 25px;
+    min-width: 40px;
+    float: right;
+    margin-top: 3px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgb(196 251 205 / 91%) 0%, rgb(56 163 255 / 92%) 100%);
+    box-shadow: 0 0 20px #fbfbfb;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards .card-top {
+    max-height: 25px;
+    display: flex;
+    padding-top: 10px;
+}
+
+.cards .card-top h4 {
+    margin: 0;
+    display: flex;
+    font-size: 12px;
+    text-align: left;
+    width: 85%;
+    padding-left: 20px;
+}
+
+.cards .card-top .delete-button {
+    margin: auto;
+    width: 25px;
+    height: 25px;
+}
+
+.cards .card-top .delete-button div {
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #0000003b;
+    border-radius: 50px;
+    color: #ffffff91;
+}
+
+.cards .card {
+    background: #51cfff38;
+    width: 50%;
+    max-width: 500px;
+    margin: 25px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    border: black 2px solid;
+    border-radius: 15px;
+}
+
+.card div {
+    display: flex;
+}
+
+.card div .comment-form {
+    width: 15%;
+    margin: auto;
+}
+
+.card div p {
+    margin: 5px;
+    text-align: left;
+    display: flex;
+    padding-left: 20px;
+}
+
+.card .reactions {
+    height: 25px;
+}
+
+/* #################################  Coment User Box ################################# */
+
+.comment-form .contenedorComentarios {
+    border: none;
+}
+
+.comment-form .contenedorComentarios div {
+    border: none;
+}
+
+.contenedorComentarios {
+    display: flex;
+    padding-top: 8px;
+}
+
+.contenedorComentarios div div {
+    flex-direction: column;
+    text-align: left;
+    width: auto;
+    border-radius: 13px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: #24f9d280;
+}
+
+.contenedorComentarios div div span:first-child {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.contenedorComentarios div div span:last-child {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.contenedorComentarios div {
+    padding-left: 40px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.span-text-input span.badge[contenteditable] {
+    display: inline-block;
+}
+
+.span-text-input span.badge[contenteditable]:empty::before {
+    content: attr(data-placeholder);
+    display: inline-block;
+    color: rgb(24, 24, 24);
+}
+
+.span-text-input span.badge[contenteditable]:empty:focus::before {
+    content: attr(data-placeholder);
+    color: rgb(83, 83, 83);
+}
+
+/* #################################  Coment User Box ################################# */
+
+.contenedorTexto div {
+    text-align: left;
+    width: auto;
+    border-radius: 13px;
+    padding: 3px 10px 3px 10px;
+    background-color: #b2fbfb;
+}
+
+.contenedorTexto div span span {
+    word-break: break-all;
+    font-size: 15px;
+}
+
+.contenedorTexto div span span:focus {
+    outline: none;
+}
+
+.contenedorTexto {
+    padding: 10px 10px 10px 10px;
+}
+
+/* #################################  Posteo User Box ################################# */
+
+#posteador .card {
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+    height: 30px;
+}
+
+#posteador .contenedorTexto {
+    padding: 0px;
+}
+
+#posteador .card div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    border-radius: 25px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#posteador #profileimage {
+    width: 32px;
+}
+
+#profileimage div {
+    background-size: cover;
+    border-radius: 25px;
+}
+
+#posteador .contenedorTexto div {
+    margin-left: 10px;
+    border-radius: 42px;
+    align-items: center;
+    justify-content: left;
+    height: 20px;
+    padding-left: 10px;
+}
+
+@media (max-width: 1200px) {
+    #bloques .card {
+        min-height: 130px;
+    }
+    .contenedorComentarios div {
+        padding-left: 10px;
+    }
+    .cards .card {
+        min-width: 245px;
+        margin: 20px auto auto auto;
+    }
+    #header_wrapper #header {
+        height: 60px;
+    }
+    #header .post-header {
+        display: contents;
+    }
+    #posteador div div {
+        padding: 0;
+        border-radius: 0px;
+        margin: 0;
+    }
+    #control {
+        display: flex;
+        flex-direction: column;
+        min-width: 270px;
+    }
+    #header #sitename {
+        display: none;
+    }
+    #header div {
+        width: 100%;
+    }
+    #header #sitename a {
+        font-size: 18px;
+    }
+    #header .post-header a:-webkit-any-link {
+        font-size: 18px;
+    }
+    #footer2 {
+        width: 400px;
+        padding: 0px;
+        font-size: 12px;
+        color: #848484;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #footer_wrapper {
+        display: none;
+    }
+    #header div:last-child {
+        display: flex;
+        width: 100%;
+    }
+    .post-header li {
+        background-color: #ffffff8c;
+        padding: 0px 8px 0px 8px;
+        border-radius: 27px;
+    }
+    #header div .post-header li a:-webkit-any-link {
+        color: #000000a6;
+    }
+}

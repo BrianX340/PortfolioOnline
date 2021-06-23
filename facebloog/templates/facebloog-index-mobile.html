@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/facebloog/index_mobile.css') }}">
+	<title>{% block title %}Facebloog | Bienvenido!{% endblock %}</title>
+
+    <script>
+        function crearCuenta(){
+            window.location = window.location['href']+'-register'; 
+        }
+    </script>
+
+</head>
+    <body>
+        
+
+
+        <div class="mobile-content">
+            <div class="title">
+                <span>Facebloog</span>
+            </div>
+
+            <form action="{{ url_for('verificar_usuario_facebloog_mobile') }}" method="post">
+                <div class='formulario'>
+                    <div class='email'>
+                        <input type="text" name="email" placeholder="Ingrese Email o Telefono" name="" id="">
+                    </div>
+                    <div class='clave'>
+                        <input type="password" name="password" placeholder="Ingrese Clave" name="" id="">
+                    </div>
+                    <div class='entrar'>
+                        <button>Entrar</button>
+                    </div>
+            </form>
+                    <div class='olvidaste'>
+                        <span>Olvidaste la contraseña</span>
+                    </div>
+                    <div class='separador'>
+                        <span>-----------------------</span>
+                    </div>
+                        <div class='crearcuenta'>
+                            <a href="{{ url_for('facebloog_create_account_mobile') }}">Crear Cuenta Nueva</a>
+                        </div>
+                </div>
+            
+        </div>
+    </body>
+
+</html>

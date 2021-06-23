@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="">
+	<title>Facebloog | Bienvenido!</title>
+
+    <style>
+        #body {
+            display: none;
+        }
+    </style>
+
+</head>
+<body id='body'>
+	<section class="example2">
+		<ul class="cuadrados">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</section>
+
+	<div id='control'>
+	<div id="header_wrapper">
+		<div id="header">
+			<li id="sitename"><a href="{{ url_for('facebloog') }}">Facebloog</a></li>
+			<div>
+                <form class="login-form" action="{{ url_for('verificar_usuario_facebloog') }}" method="post">
+                    <li>Email o Numero Movil<br><input type="text" name="email_login"></li>
+                    <li>Clave<br><input type="password" name="password_login"><br><a href="">Olviste la cuenta?</a></li>
+                    <li><input type="submit" name="login" value="Log In"></li>
+                </form>
+			</div>
+			
+		</div>
+	</div>
+	
+
+	<script>
+        function ocultarPopup(){
+        document.getElementById('popup-wrapper').style.display = 'none'
+    }
+    </script>
+    
+    <div id='popup-wrapper' class="popup-wrapper">
+        <div class="popup">
+            <div class="popup-content">
+                <h3>Bienvenido a Facebloog</h3>
+                <h2 id='popup-email'>{{ email }}</h2>
+                <p>¡Gracias por registrarse!</p>
+                <input type="button" value="Volver" onClick="ocultarPopup()">
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+    
+        <div id="div2">
+            <h1>Crear una cuenta</h1>
+            <p>Es gratis no te preocupes.</p>
+            <form id="register-form" class="register-form" action="{{ url_for('registrar_usuario_facebloog') }}" method="post">
+                <li><input id="name" name="name" type="text" placeholder="Nombre" id="firstname"></li>
+                <li><input id="lastname" name="lastname" type="text" placeholder="Apellido" id="surname"></li>
+                <li><input id="emailregister" name="emailregister" type="text" placeholder="Numero movil o Email" id="email"></li>
+                <li><input id="passwordregister" name="passwordregister" type="password" placeholder="Clave"></li>
+                <li><input id="passwordconfirm" name="passwordconfirm" type="password" placeholder="Confirme clave"></li>
+    
+                <li id="terms">Al presionar en crear cuenta usted acepta <a href="">Terminos y condiciones</a> y tambien <br>you have
+                    read our <a href="">Politica de datos</a>, incluyendo <a href="">uso de Cookies</a>.</li>
+                <li><input id="create_page" type="submit" value="Crear Cuenta!" id="result"></li>
+                <li><a href="">Crear cuenta</a> para celebridades, bandas o empresas.</li>
+            </form>
+        </div>
+    
+    </div>
+
+
+	
+	<div id="footer_wrapper">
+		<!--
+		<div id="footer1">
+			English (UK) <a href="">हिन्दी</a><a href="">ਪੰਜਾਬੀ</a><a href=""> اردو</a><a href="">தமிழ்</a><a
+				href="">বাংলা</a><a href="">मराठी</a><a href="">తెలుగు</a><a href="">ગુજરાતી</a><a href="">ಕನ್ನಡ</a><a
+				href="">മലയാളം</a>
+		</div>
+		-->
+		<div id="footer2">
+			<a href="">Privacy</a><a href="">Cookies</a><a href="">Ads</a><a href="">Terms</a><a href="">Help</a>
+		</div>
+
+	</div>
+
+	<script src="{{ url_for('static', filename='js/facebloog/index.js') }}"></script>
+
+	</div>
+</body>
+</html>

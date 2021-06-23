@@ -1,0 +1,54 @@
+{% extends "facebloog-base.html" %}
+
+{% block enlace %}  <link rel="stylesheet" href="{{ url_for('static', filename='css/facebloog/profile.css') }}">  {% endblock %}
+
+
+{% block header %}
+<ul class="post-header">
+    <li><a href="{{ url_for('facebloog') }}">Inicio</a></li>
+    <li><a href="{{ url_for('facebloog_logout') }}">Logout</a></li>
+</ul>
+{% endblock %}
+
+{% block body %}
+
+<div id='profile-section'>
+    <div class="card">
+        <div>
+            <div class='profileimage' >
+                <img id='profile-image' alt="">
+                <form onsubmit='recivir_profile()' id='formuploadphoto' action="/uploader" method="POST" enctype="multipart/form-data">
+                    <input id="inputin" type="file" name="foto_perfil" value="none">
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class='userinfo'>
+                <div>
+                    <div>
+                        <span>Nombre:</span><span id='name'></span>
+                    </div>
+                    <div>
+                        <span>Apellido:</span><span id='lastname'></span>
+                    </div>
+                    <div>
+                        <span>Email:</span><span id='email'></span>
+                    </div>
+                    <div>
+                        <span>Cantidad de Posteos:</span><span id='cantpost'></span>
+                    </div>
+                    <div>
+                        <span>Cantidad de Comentarios:</span><span id='cantcoment'></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/facebloog/profile.js') }}"></script>
+{% endblock %}

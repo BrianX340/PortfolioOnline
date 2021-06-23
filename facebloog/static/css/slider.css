@@ -1,0 +1,71 @@
+#ASD .container {
+  margin: auto;
+  background-color: white;
+  width: 800px;
+  padding: 30px;
+}
+
+#ASD ul, #ASD li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#ASD ul.slider {
+  position: relative;
+  width: 800px;
+  height: 300px;
+}
+
+#ASD ul.slider li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  transition: opacity .5s;
+  background: #fff;
+}
+
+#ASD ul.slider li img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+#ASD ul.slider li:first-child {
+  opacity: 1;
+  /*Mostramos el primer <li>*/
+}
+
+#ASD ul.slider li:target {
+  opacity: 1;
+  /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+#ASD .menu {
+  text-align: center;
+  margin: 20px;
+}
+
+#ASD .menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+#ASD .menu li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+#ASD .slider {
+  margin: auto;
+}

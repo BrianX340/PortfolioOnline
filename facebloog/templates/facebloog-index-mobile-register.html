@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/facebloog/index_mobile_register.css') }}">
+	<title>{% block title %}Facebloog | Bienvenido!{% endblock %}</title>
+
+</head>
+    <body>
+        <div class="mobile-content">
+            <div class="title">
+                <span>Facebloog</span>
+            </div>
+
+            <form action="{{ url_for('crear_usuario_facebloog_mobile') }}" method="post">
+                <div class='formulario'>
+                    <div class='campo'>
+                        <input type="text" name="name" placeholder="Ingrese Nombre" name="" id="">
+                    </div>
+                    <div class='campo'>
+                        <input type="text" name="lastname" placeholder="Ingrese Apellido" name="" id="">
+                    </div>
+                    <div class='campo'>
+                        <input type="text" name="emailregister" placeholder="Ingrese Email o Telefono" name="" id="">
+                    </div>
+                    <div class='clave'>
+                        <input type="password" id="passwordregister" name="passwordregister" placeholder="Ingrese Clave" name="" id="">
+                    </div>
+                    <div class='clave'>
+                        <input type="password" id="passwordconfirm" name="password2" placeholder="Confirme Clave" name="" id="">
+                    </div>
+                    <div class='crearcuenta'>
+                        <input id="create_page" type="submit" value="Crear Cuenta!" id="result">
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </body>
+</html>
+
+<script src="{{ url_for('static', filename='js/facebloog/mobile-register.js') }}"></script>
