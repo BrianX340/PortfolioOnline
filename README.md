@@ -2,7 +2,7 @@
 <h1 style="color:#777777">Bienvenidos a mi Portfolio en Github</h1>
 
 
-<center><img src="./profile.jpg" style='border-radius:10px;'></center>
+-><center><img src="./profile.jpg" style='border-radius:10px;'></center><-
 
  ### ¿Quien soy?
  Hola, mi nombre es Brian, soy und desarrollador Junior con multiples conocimientos, dejare al final una lista con los mismos, me gustan los videojuegos, puzzles y lo relacionado al mundo IT, soy de Presidente Derqui, Buenos Aires, Argentina, estoy en busca mi mi primer empleo en IT siempre he sido un aficionado a la informatica.
