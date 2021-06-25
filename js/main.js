@@ -2,7 +2,7 @@ window.onload = function(){
   document.addEventListener('click', event =>{
     elementId = event.path[0].getAttribute('id')
     if (elementId=='proyect01'){
-      url = `${window.location.origin}`.split('Online/')[0]+'Online/facebloog/templates/index.html'
+      url = `${window.location.origin}`+'/facebloog/templates/index.html'
       window.location.href = url
       //window.location.href = `${window.origin}`.split('index')
     }
