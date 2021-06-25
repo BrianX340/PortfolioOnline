@@ -75,7 +75,7 @@ function registrarUsuario(user){
         if (data.status == 'ok'){
             crearPopup('Bienvenido a Facebloog','Su cuenta se ha creado satisfactoriamente.')
         } else if (data.status == 'error'){
-            crearPopup('Ops! ha ocurrido un error',data.content)
+            crearPopup('Ops! ha ocurrido un error',data.error)
         }
     })
 }
