@@ -584,16 +584,47 @@ button:hover {
 }
  
 .popup-wrapper {
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(83, 80, 80, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
+
+.containerClose {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.backContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.backContainer a {
+    background-color: #0025ff;
+    width: 30%;
+    border-radius: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.popup-close {
+    background-color: #88dcff;
+    width: 30px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
  
 .popup {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     width: 100%;
