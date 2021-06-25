@@ -1,8 +1,19 @@
 window.onload = function(){
+  document.addEventListener('click', event =>{
+    elementId = event.path[0].getAttribute('id')
+    if (elementId=='proyect01'){
+      url = 'file:///D:/Documents/GitHub/PortfolioOnline/index.html#conocimientos'.split('Online/')[0]+'Online/facebloog/templates/index.html'
+      window.location.href = url
+      //window.location.href = `${window.origin}`.split('index')
+    }
+  })
+  
+
+
     var barraCarga = document.getElementById('barra-carga');
     
-    barraCarga.style.visibility = 'hidden';
-    barraCarga.style.display = 'none';
+    //barraCarga.style.visibility = 'hidden';
+    //barraCarga.style.display = 'none';
 }
 $('document').ready(function(){
     //ANIMACIÓN DE "REVELACIÓN" DE TEXTO.

@@ -44,7 +44,7 @@
 			<div id="header">
 				<li id="sitename"><a href="./index.html">Facebloog</a></li>
 				<div>
-					<form class="login-form" action="" method="post">
+					<form class="login-form" method="post">
 						<li>Email o Numero Movil<br><input type="text" name="email_login"></li>
 						<li>Clave<br><input type="password" name="password_login"><br><a href="">Olviste la cuenta?</a>
 						</li>
@@ -62,10 +62,9 @@
 				<h1>Crear una cuenta</h1>
 				<p>Es gratis no te preocupes.</p>
 				<form id="register-form" class="register-form" action="" method="post">
-					<li><input id="name" name="name" type="text" placeholder="Nombre" id="firstname"></li>
-					<li><input id="lastname" name="lastname" type="text" placeholder="Apellido" id="surname"></li>
-					<li><input id="emailregister" name="emailregister" type="text" placeholder="Numero movil o Email"
-							id="email"></li>
+					<li><input id="name" name="name" type="text" placeholder="Nombre"></li>
+					<li><input id="lastName" name="lastname" type="text" placeholder="Apellido"></li>
+					<li><input id="username" name="username" type="text" placeholder="Numero movil o Email"></li>
 					<li><input id="passwordregister" name="passwordregister" type="password" placeholder="Clave"></li>
 					<li><input id="passwordconfirm" name="passwordconfirm" type="password" placeholder="Confirme clave">
 					</li>
@@ -73,7 +72,7 @@
 					<li id="terms">Al presionar en crear cuenta usted acepta <a href="">Terminos y condiciones</a> y
 						tambien <br>you have
 						read our <a href="">Politica de datos</a>, incluyendo <a href="">uso de Cookies</a>.</li>
-					<li><input id="create_page" type="submit" value="Crear Cuenta!" id="result"></li>
+					<li class='boxButton'><span id='crearCuenta'>Crear Cuenta!</span></li>
 					<li><a href="">Crear cuenta</a> para celebridades, bandas o empresas.</li>
 				</form>
 			</div>

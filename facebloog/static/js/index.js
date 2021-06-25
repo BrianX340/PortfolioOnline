@@ -6,38 +6,91 @@ window.onload = () => {
         document.getElementById('body').style.display = 'block';
     }
 
-    document.addEventListener('keyup', logKey);
+    document.addEventListener('keydown', event => {
+        if (event.key=='Enter'){
+            elementId = event.path[0].getAttribute('id')
+            if (elementId == 'name'){
+                document.getElementById('lastName').focus()
+            } else if (elementId == 'lastName'){
+                document.getElementById('username').focus()
+            } else if (elementId == 'username'){
+                document.getElementById('passwordregister').focus()
+            } else if (elementId == 'passwordregister'){
+                document.getElementById('passwordconfirm').focus()
+            } else if (elementId == 'passwordconfirm'){
+                name = document.getElementById('name').value
+                lastName = document.getElementById('lastName').value
+                username = document.getElementById('username').value
+                passwordregister = document.getElementById('passwordregister').value
+                if ( name && lastName && username && passwordregister){
+                    registrarUsuario({
+                        name,
+                        lastName,
+                        username,
+                        passwordregister
+                    })
+                }
+            }
+            event.preventDefault()
+        }
+    })
 
-    let registar = document.getElementById('register-form')
-    registar.addEventListener('onsubmit', clearForm)
-    if (document.getElementById('popup-email').textContent != '') {
-        document.getElementById('popup-wrapper').style.display = 'block'
-    }
+    document.addEventListener('click', event =>{
+        elementId = event.path[0].getAttribute('id')
+        if (elementId=='crearCuenta'){
+            name = document.getElementById('name').value
+            lastName = document.getElementById('lastName').value
+            username = document.getElementById('username').value
+            passwordregister = document.getElementById('passwordregister').value
+            if ( name && lastName && username && passwordregister){
+                registrarUsuario({
+                    name,
+                    lastName,
+                    username,
+                    passwordregister
+                })
+            }
+        }
+    })
 
 }
 
-function logKey() {
-    const clave = document.getElementById('passwordregister')
-    const clave2 = document.getElementById('passwordconfirm')
-
-    const texto = document.getElementById('create_page')
-    if (clave.value == clave2.value) {
-        texto.style.background = 'linear-gradient(to bottom, rgb(18 255 5 / 91%) 0%, rgb(26 138 24 / 92%) 100%)';
-        texto.value = 'Crear Cuenta!'
-    } else {
-        texto.style.background = 'linear-gradient(to bottom, rgb(255 5 5 / 91%) 0%, rgb(138 24 24 / 92%) 100%)';
-        texto.value = 'Las claves no coinciden!'
-    }
-
-}
 
 function clearForm() {
     document.getElementById('name').value = ''
-    document.getElementById('lastname').value = ''
+    document.getElementById('lastName').value = ''
     document.getElementById('emailregister').value = ''
     document.getElementById('passwordregister').value = ''
     document.getElementById('passwordconfirm').value = ''
 }
+
+
+function registrarUsuario(user){
+
+    fetch(`http://localhost:3000/api/Auth/register`, {
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify(user),
+        cache: "no-cache",
+        headers: new Headers({
+            "content-type": "application/json"
+        })
+    }).then((response) => {if (response.status !== 200) {
+        console.log(`Looks like there was a problem. Status code: ${response.status}`);
+        return;
+    }
+    response.json().then(function (data) {
+        console.log(data)
+    });
+    }).catch(function (error) {
+        console.log("Fetch error: " + error);
+    });
+
+
+    console.log('registrando')
+    clearForm()
+}
+
 
 /*
 <div id='popup-wrapper' class="popup-wrapper">
