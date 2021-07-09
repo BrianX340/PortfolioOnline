@@ -2,18 +2,13 @@ window.onload = function(){
   document.addEventListener('click', event =>{
     elementId = event.path[0].getAttribute('id')
     if (elementId=='proyect01'){
-      url = `${window.location.origin}`+'/PortfolioOnline/facebloog/templates/index.html'
-      window.location.href = url
-      //window.location.href = `${window.origin}`.split('index')
+      window.location.href = 'https://brianx340-social-network.herokuapp.com/login'
     }
   })
   
 
 
     var barraCarga = document.getElementById('barra-carga');
-    
-    //barraCarga.style.visibility = 'hidden';
-    //barraCarga.style.display = 'none';
 }
 $('document').ready(function(){
     //ANIMACIÓN DE "REVELACIÓN" DE TEXTO.
